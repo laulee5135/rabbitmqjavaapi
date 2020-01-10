@@ -36,6 +36,8 @@ public class MyProducer {
          * Map<String, Object> arguments:队列的其他属性，例如x-message-ttl、x-expires、x-max-length、x-max- length-bytes、x-dead-letter-exchange、x-dead-letter-routing-key、x-max-priority。
          */
         // String queue, boolean durable, boolean exclusive, boolean autoDelete,Map<String, Object> arguments
+//        Map<String, Object> argss = new HashMap<String, Object>();
+//        argss.put("x-message-ttl",6000);
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
         // 发送消息(发送到默认交换机AMQP Default，Direct)
         // 如果有一个队列名称跟Routing Key相等，那么消息会路由到这个队列

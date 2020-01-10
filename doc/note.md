@@ -126,10 +126,12 @@ MQ可靠性投递：
 8.其他插件
 
 
-交换机类型：direct、fanout、topic 每一种对应投递队列方式不同，比如，fanout无须指定routingkey。具体见官网。
+交换机类型：direct、fanout、topic 每一种对应投递队列方式不同。具体见官网。
+direct：任何发送到Direct Exchange的消息都会被转发到routing_key中指定的Queue
+fanout：fanout无须指定routingkey，在这个模式下routing key失去作用，提前将Exchange与Queue进行绑定，一个Exchange可以绑定多个Queue，一个Queue可以同多个Exchange进行绑定
+topic：
 
-
-面试题：
+Question：
 1、消息队列的作用与使用场景?
 2、创建队列和交换机的方法?
 3、多个消费者监听一个生产者时，消息如何分发?  1.轮训 2.公平分发（使用basicQos实现公平分发）
@@ -143,5 +145,14 @@ MQ可靠性投递：
 11、消息的幂等性：在有补偿机制的情况下会有消息重发的情况，可在生产者 AMQP.BasicProperites.Builder().messageId(String.valueOf(UUID.rangdomUUID()) 生成一个唯一ID，并且业务消息中指定一个唯一的业务ID，然后在消费者一端，进行消息落库，来区分避免重复消费。
 
 
-
 Spring AMQP默认使用的消息转换器是SimpleMessageConverter
+
+
+疑问：
+1.交换机、队列等对象是由生产者创建还是消费者创建？为什么？
+2.为什么声明队列的时候最后一个参数 arguments 必须在生产端和消费者都得声明同样的参数(eg:"x-message-ttl")？不一样时会报错？   生产者消费者声明同一个队列时，定义要一致
+3.生产者在一个通道里批量发送不同属性（是否带AMQP.BasicProperties，比如过期属性）的数据，为什么带过期属性的数据和没带过期属性的数据都会存活，过期的数据并没有删除或者转移到死信队列（假如有）中。
+4.MQ什么情况下会发生堵塞（堆积）？怎么处理？
+5.怎么知道一个消息是否已经被消费（或者 消息是否还在队列中）？（数据量很大）。只要被ack的消息都是已经被消费的，已经消费的数据就不会存在在队列中（通过消息落库确定）
+6.怎么通过UI界面或者命令查看队列中内容？ 好像没有
+7.一个队列中是内容是顺序被消费的，如果某一个消息消费很慢，没有及时ack，就会造成后面数据的积压，如何解决这样的超时消费？

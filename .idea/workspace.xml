@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c765b2c4-cc86-4805-8546-e5f64b8f984f" name="Default Changelist" comment="" />
+    <list default="true" id="c765b2c4-cc86-4805-8546-e5f64b8f984f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/doc/note.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/note.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laulee/dlx/DlxConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/laulee/dlx/DlxConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laulee/dlx/DlxProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/laulee/dlx/DlxProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/laulee/simple/MyProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/laulee/simple/MyProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/laulee/simple/MyProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/laulee/simple/MyProducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/laulee/ttl/TTLProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/laulee/ttl/TTLProducer.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +66,46 @@
       <recent name="com.laulee.limit" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DlxConsumer">
+    <configuration name="DlxConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.laulee.dlx.DlxConsumer" />
+      <module name="rabbitmqjavaapi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.laulee.dlx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DlxConsumer2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.laulee.dlx.DlxConsumer2" />
+      <module name="rabbitmqjavaapi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.laulee.dlx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DlxProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.laulee.dlx.DlxProducer" />
+      <module name="rabbitmqjavaapi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.laulee.dlx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.laulee.simple.MyConsumer" />
       <module name="rabbitmqjavaapi" />
@@ -73,8 +119,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.laulee.simple.MyProducer" />
+      <module name="rabbitmqjavaapi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.laulee.simple.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DlxConsumer" />
+        <item itemvalue="Application.DlxProducer" />
+        <item itemvalue="Application.DlxConsumer2" />
+        <item itemvalue="Application.MyProducer" />
         <item itemvalue="Application.MyConsumer" />
       </list>
     </recent_temporary>
@@ -113,6 +176,7 @@
       <workItem from="1578132996994" duration="8984000" />
       <workItem from="1578154071693" duration="1852000" />
       <workItem from="1578200278770" duration="6017000" />
+      <workItem from="1578625265408" duration="16237000" />
     </task>
     <servers />
   </component>
@@ -124,30 +188,60 @@
       <screen x="0" y="23" width="1440" height="835" />
     </state>
     <state x="184" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.835@0.23.1440.835" timestamp="1578131006005" />
-    <state width="1398" height="145" key="GridCell.Tab.0.bottom" timestamp="1578131642198">
-      <screen x="0" y="23" width="1440" height="835" />
+    <state x="322" y="-843" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1578648914533">
+      <screen x="-272" y="-1080" width="1920" height="1080" />
     </state>
+    <state x="322" y="-843" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1440.900/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578648914533" />
+    <state width="1878" height="366" key="GridCell.Tab.0.bottom" timestamp="1578650285873">
+      <screen x="-272" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="366" key="GridCell.Tab.0.bottom/0.0.1440.900/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578650285873" />
+    <state width="1878" height="297" key="GridCell.Tab.0.bottom/0.23.1440.835/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578627096657" />
     <state width="1398" height="145" key="GridCell.Tab.0.bottom/0.23.1440.835@0.23.1440.835" timestamp="1578131642198" />
-    <state width="1398" height="145" key="GridCell.Tab.0.center" timestamp="1578131642198">
-      <screen x="0" y="23" width="1440" height="835" />
+    <state width="1878" height="366" key="GridCell.Tab.0.center" timestamp="1578650285872">
+      <screen x="-272" y="-1080" width="1920" height="1080" />
     </state>
+    <state width="1878" height="366" key="GridCell.Tab.0.center/0.0.1440.900/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578650285872" />
+    <state width="1878" height="297" key="GridCell.Tab.0.center/0.23.1440.835/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578627096656" />
     <state width="1398" height="145" key="GridCell.Tab.0.center/0.23.1440.835@0.23.1440.835" timestamp="1578131642198" />
-    <state width="1398" height="145" key="GridCell.Tab.0.left" timestamp="1578131642197">
-      <screen x="0" y="23" width="1440" height="835" />
+    <state width="1878" height="366" key="GridCell.Tab.0.left" timestamp="1578650285871">
+      <screen x="-272" y="-1080" width="1920" height="1080" />
     </state>
+    <state width="1878" height="366" key="GridCell.Tab.0.left/0.0.1440.900/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578650285871" />
+    <state width="1878" height="297" key="GridCell.Tab.0.left/0.23.1440.835/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578627096650" />
     <state width="1398" height="145" key="GridCell.Tab.0.left/0.23.1440.835@0.23.1440.835" timestamp="1578131642197" />
-    <state width="1398" height="145" key="GridCell.Tab.0.right" timestamp="1578131642198">
-      <screen x="0" y="23" width="1440" height="835" />
+    <state width="1878" height="366" key="GridCell.Tab.0.right" timestamp="1578650285873">
+      <screen x="-272" y="-1080" width="1920" height="1080" />
     </state>
+    <state width="1878" height="366" key="GridCell.Tab.0.right/0.0.1440.900/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578650285873" />
+    <state width="1878" height="297" key="GridCell.Tab.0.right/0.23.1440.835/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578627096657" />
     <state width="1398" height="145" key="GridCell.Tab.0.right/0.23.1440.835@0.23.1440.835" timestamp="1578131642198" />
-    <state x="229" y="23" key="SettingsEditor" timestamp="1578200312028">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1878" height="366" key="GridCell.Tab.1.bottom" timestamp="1578650285877">
+      <screen x="-272" y="-1080" width="1920" height="1080" />
     </state>
+    <state width="1878" height="366" key="GridCell.Tab.1.bottom/0.0.1440.900/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578650285877" />
+    <state width="1878" height="366" key="GridCell.Tab.1.center" timestamp="1578650285875">
+      <screen x="-272" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="366" key="GridCell.Tab.1.center/0.0.1440.900/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578650285875" />
+    <state width="1878" height="366" key="GridCell.Tab.1.left" timestamp="1578650285875">
+      <screen x="-272" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="366" key="GridCell.Tab.1.left/0.0.1440.900/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578650285875" />
+    <state width="1878" height="366" key="GridCell.Tab.1.right" timestamp="1578650285876">
+      <screen x="-272" y="-1080" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="366" key="GridCell.Tab.1.right/0.0.1440.900/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578650285876" />
+    <state x="33" y="-1052" key="SettingsEditor" timestamp="1578648888964">
+      <screen x="-272" y="-1080" width="1920" height="1080" />
+    </state>
+    <state x="33" y="-1052" key="SettingsEditor/0.0.1440.900/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578648888964" />
     <state x="229" y="23" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1578200312028" />
     <state x="229" y="24" key="SettingsEditor/0.23.1440.835@0.23.1440.835" timestamp="1578131951814" />
-    <state x="394" y="222" width="651" height="456" key="find.popup" timestamp="1578143040596">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="253" y="-814" width="868" height="548" key="find.popup" timestamp="1578628365113">
+      <screen x="-272" y="-1080" width="1920" height="1080" />
     </state>
+    <state x="253" y="-814" width="868" height="548" key="find.popup/0.0.1440.900/-272.-1080.1920.1080@-272.-1080.1920.1080" timestamp="1578628365113" />
     <state x="394" y="222" width="651" height="456" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1578143040596" />
   </component>
 </project>
