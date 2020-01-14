@@ -5,10 +5,11 @@ import com.rabbitmq.client.*;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by laulee on 2020/1/4.
- * 消息消费者，由于消费者的代码被注释掉了，10秒后，消息会从正常队列TEST_DLX_QUEUE到达死信交换机DLX_EXCHANGE,然后由死信队列DLX_QUEUE消费(DlxConsumer2)
+ * 死信队列消息消费者，由于消费者的代码被注释掉了，n秒后，消息会从正常队列TEST_DLX_QUEUE到达死信交换机DLX_EXCHANGE,然后由死信队列DLX_QUEUE消费(DlxConsumer2)
  */
 public class DlxConsumer2 {
 
@@ -29,9 +30,9 @@ public class DlxConsumer2 {
         // 建立连接
         Connection conn = factory.newConnection();
         // 创建消息通道
-        Channel channel = conn.createChannel();
+        final Channel channel = conn.createChannel();
 
-        //声明队列（默认交换机 Direct）
+        //声明队列
         channel.queueDeclare(DLX_QUEUE, false, false, false, null);
 
         //声明死信交换机
@@ -39,6 +40,7 @@ public class DlxConsumer2 {
 
         //绑定，此处Dead letter routing key 设置为 #  （#多个单词或0个单词）
         channel.queueBind(DLX_QUEUE, DLX_EXCHANGE, "#");
+
         System.out.println("waiting for message ......");
 
         // 创建消费者
@@ -46,11 +48,20 @@ public class DlxConsumer2 {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 String msg = new String(body, "UTF-8");
+//                if (msg.contains("4")) {
+                    System.out.println("开始等待....");
+                    try {
+                        TimeUnit.SECONDS.sleep(2);
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+//                }
                 System.out.println("Received message : '" + msg + "'");
+                    channel.basicAck(envelope.getDeliveryTag(),false);
             }
         };
         // 开始获取消息
         // String queue, boolean autoAck, Consumer callback
-        channel.basicConsume(DLX_QUEUE, true, consumer);
+        channel.basicConsume(DLX_QUEUE, false, consumer);
     }
 }
